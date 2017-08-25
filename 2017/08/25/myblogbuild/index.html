@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://image.liuxianan.com/201608/20160818_143914_495_9084.png?_=5800863">
 <meta property="og:image" content="http://image.liuxianan.com/201608/20160823_183047_352_1475.png?_=5800863">
 <meta property="og:image" content="http://image.liuxianan.com/201608/20160823_183325_470_9306.png?_=5800863">
-<meta property="og:updated_time" content="2017-08-25T02:28:24.444Z">
+<meta property="og:updated_time" content="2017-08-25T02:36:21.003Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杨亨的博客">
 <meta name="twitter:description" content="使用Hexo+GitHub+个人域名搭建个人博客一、前言之前一直都是使用Jekyll+GitHub搭建个人博客，但由于Jekyll是基于Ruby实现，搭建本地服务比较麻烦，我个人又对Ruby不熟悉，因此就转用Hexo搭建博客了。Hexo是基于NodeJS实现的，相对于Jekyll，实现Hexo的调试环境就简单许多。 二、配置环境和创建项目1.安装Hexo$ sudo npm install -g">
@@ -95,10 +95,10 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h1 id="使用Hexo-GitHub-个人域名搭建个人博客"><a href="#使用Hexo-GitHub-个人域名搭建个人博客" class="headerlink" title="使用Hexo+GitHub+个人域名搭建个人博客"></a>使用Hexo+GitHub+个人域名搭建个人博客</h1><h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>之前一直都是使用Jekyll+GitHub搭建个人博客，但由于Jekyll是基于Ruby实现，搭建本地服务比较麻烦，我个人又对Ruby不熟悉，因此就转用Hexo搭建博客了。Hexo是基于NodeJS实现的，相对于Jekyll，实现Hexo的调试环境就简单许多。</p>
-<h2 id="二、配置环境和创建项目"><a href="#二、配置环境和创建项目" class="headerlink" title="二、配置环境和创建项目"></a>二、配置环境和创建项目</h2><h3 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1.安装Hexo"></a>1.安装Hexo</h3><pre><code>$ sudo npm install -g hexo
+            <h2 id="使用Hexo-GitHub-个人域名搭建个人博客"><a href="#使用Hexo-GitHub-个人域名搭建个人博客" class="headerlink" title="使用Hexo+GitHub+个人域名搭建个人博客"></a>使用Hexo+GitHub+个人域名搭建个人博客</h2><h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>之前一直都是使用Jekyll+GitHub搭建个人博客，但由于Jekyll是基于Ruby实现，搭建本地服务比较麻烦，我个人又对Ruby不熟悉，因此就转用Hexo搭建博客了。Hexo是基于NodeJS实现的，相对于Jekyll，实现Hexo的调试环境就简单许多。</p>
+<h3 id="二、配置环境和创建项目"><a href="#二、配置环境和创建项目" class="headerlink" title="二、配置环境和创建项目"></a>二、配置环境和创建项目</h3><h4 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1.安装Hexo"></a>1.安装Hexo</h4><pre><code>$ sudo npm install -g hexo
 </code></pre><p>安装完后就可以初始化一个项目</p>
-<h3 id="2-初始化项目"><a href="#2-初始化项目" class="headerlink" title="2.初始化项目"></a>2.初始化项目</h3><pre><code>$ sudo hexo init projectname
+<h4 id="2-初始化项目"><a href="#2-初始化项目" class="headerlink" title="2.初始化项目"></a>2.初始化项目</h4><pre><code>$ sudo hexo init projectname
 </code></pre><h4 id="目录结构："><a href="#目录结构：" class="headerlink" title="目录结构："></a>目录结构：</h4><pre><code>.
 ├── node_modules             // 依赖
 ├── scaffolds                // 脚手架、骨架
@@ -109,31 +109,31 @@
 ├── _config.yml              // 全局配置文件
 ├── package.json             // 项目的参数和所依赖插件
 </code></pre><p><strong>_config.yml</strong><br>全局配置文件；网站的名称、副标题、描述、作者、语言、主题、时间格式、URL、端口、代码高亮、部署等等参数</p>
-<h3 id="3-生成HTML静态页"><a href="#3-生成HTML静态页" class="headerlink" title="3.生成HTML静态页"></a>3.生成HTML静态页</h3><pre><code>$ hexo generate
+<h4 id="3-生成HTML静态页"><a href="#3-生成HTML静态页" class="headerlink" title="3.生成HTML静态页"></a>3.生成HTML静态页</h4><pre><code>$ hexo generate
 </code></pre><p>或者<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> hexo g</div></pre></td></tr></table></figure></p>
-<h3 id="4-启动服务预览"><a href="#4-启动服务预览" class="headerlink" title="4.启动服务预览"></a>4.启动服务预览</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> hexo server</div></pre></td></tr></table></figure>
+<h4 id="4-启动服务预览"><a href="#4-启动服务预览" class="headerlink" title="4.启动服务预览"></a>4.启动服务预览</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> hexo server</div></pre></td></tr></table></figure>
 <p>或者<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> hexo s</div></pre></td></tr></table></figure></p>
 <p>启动服务后，在浏览器输入 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 即可访问。默认情况下，Hexo服务启动的端口为4000，若端口被占用或想使用其他端口启动，则运行命令：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> hexo server -p 端口</div></pre></td></tr></table></figure></p>
 <p>如果不想每次启动时都输入端口，可以全局配置文件 _config.yml 中配置默认端口<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">修改 _config.yml 配置文件时，冒号 : 和右边的直之间要有一个空格</div></pre></td></tr></table></figure></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">server:</div><div class="line">  port: 8800    # 配置默认端口</div></pre></td></tr></table></figure>
 <p><img src="http://upload-images.jianshu.io/upload_images/4290261-3373cb08dd5ad235.png?imageMogr2/auto-orient/strip" alt=""><br>上图为浏览结果，我个人觉得默认主题不好看；因此，我找了另一个主题。</p>
-<h2 id="三、修改主题"><a href="#三、修改主题" class="headerlink" title="三、修改主题"></a>三、修改主题</h2><p>我的个人博客使用了 miho  主题，因此，我们也做这个主题做案例吧。</p>
-<h3 id="1-主题简介"><a href="#1-主题简介" class="headerlink" title="1.主题简介"></a>1.主题简介</h3><p>miho 是一款单栏响应式的Hexo主题；基于 Hexo 3.0+ 制作，兼容移动端浏览；主题的代码托管在GitHub上，欢迎Star和Fork；如遇到问题或发表建议，可以提Issues，也可以在博客中留言给我，另外,喜欢的话不妨给个 Star。</p>
-<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3><h4 id="2-1安装主题"><a href="#2-1安装主题" class="headerlink" title="2.1安装主题"></a>2.1安装主题</h4><pre><code>$ git clone https://github.com/WongMinHo/hexo-theme-miho.git themes/miho
+<h3 id="三、修改主题"><a href="#三、修改主题" class="headerlink" title="三、修改主题"></a>三、修改主题</h3><p>我的个人博客使用了 miho  主题，因此，我们也做这个主题做案例吧。</p>
+<h4 id="1-主题简介"><a href="#1-主题简介" class="headerlink" title="1.主题简介"></a>1.主题简介</h4><p>miho 是一款单栏响应式的Hexo主题；基于 Hexo 3.0+ 制作，兼容移动端浏览；主题的代码托管在GitHub上，欢迎Star和Fork；如遇到问题或发表建议，可以提Issues，也可以在博客中留言给我，另外,喜欢的话不妨给个 Star。</p>
+<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h4><h5 id="2-1安装主题"><a href="#2-1安装主题" class="headerlink" title="2.1安装主题"></a>2.1安装主题</h5><pre><code>$ git clone https://github.com/WongMinHo/hexo-theme-miho.git themes/miho
 </code></pre><p>miho主题需要Hexo 3.0或以上版本，请先升级。</p>
-<h4 id="2-2-更新"><a href="#2-2-更新" class="headerlink" title="2.2 更新"></a>2.2 更新</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes/miho</div><div class="line">git pull</div></pre></td></tr></table></figure>
-<h4 id="2-3-依赖安装"><a href="#2-3-依赖安装" class="headerlink" title="2.3 依赖安装"></a>2.3 依赖安装</h4><p>如下依赖如果已经安装，请看配置介绍。<br>Json-content<br>生成站点文章静态数据，用于站内搜索。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-json-content --save</div></pre></td></tr></table></figure></p>
-<p>###3. 站点配置<br>站点配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">_config.yml</div></pre></td></tr></table></figure></p>
+<h5 id="2-2-更新"><a href="#2-2-更新" class="headerlink" title="2.2 更新"></a>2.2 更新</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes/miho</div><div class="line">git pull</div></pre></td></tr></table></figure>
+<h5 id="2-3-依赖安装"><a href="#2-3-依赖安装" class="headerlink" title="2.3 依赖安装"></a>2.3 依赖安装</h5><p>如下依赖如果已经安装，请看配置介绍。<br>Json-content<br>生成站点文章静态数据，用于站内搜索。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-json-content --save</div></pre></td></tr></table></figure></p>
+<h4 id="3-站点配置"><a href="#3-站点配置" class="headerlink" title="3. 站点配置"></a>3. 站点配置</h4><p>站点配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">_config.yml</div></pre></td></tr></table></figure></p>
 <p>在hexo根目录下。</p>
-<h4 id="3-1-启用主题"><a href="#3-1-启用主题" class="headerlink" title="3.1 启用主题"></a>3.1 启用主题</h4><pre><code>`theme: miho`
-</code></pre><p>####3.2 网站基本配置<br>以下配置是站点的全局配置，更多配置，<a href="https://hexo.io/zh-cn/docs/configuration.html" title="请查看" target="_blank" rel="external">请查看</a></p>
+<h5 id="3-1-启用主题"><a href="#3-1-启用主题" class="headerlink" title="3.1 启用主题"></a>3.1 启用主题</h5><pre><code>`theme: miho`
+</code></pre><h5 id="3-2-网站基本配置"><a href="#3-2-网站基本配置" class="headerlink" title="3.2 网站基本配置"></a>3.2 网站基本配置</h5><p>以下配置是站点的全局配置，更多配置，<a href="https://hexo.io/zh-cn/docs/configuration.html" title="请查看" target="_blank" rel="external">请查看</a></p>
 <pre><code>title: MinHow&apos;s Blog
 subtitle: 网站副标题
 description: 专注 WEB 开发的技术博客
 author: MinHow
 language: 网站使用的语言
 timezone: 网站时区
-</code></pre><p>####3.3 jsonContent配置<br>详细的配置请查看<a href="https://github.com/alexbruno/hexo-generator-json-content" title="hexo-generator-json-content" target="_blank" rel="external">hexo-generator-json-content</a></p>
+</code></pre><h5 id="3-3-jsonContent配置"><a href="#3-3-jsonContent配置" class="headerlink" title="3.3 jsonContent配置"></a>3.3 jsonContent配置</h5><p>详细的配置请查看<a href="https://github.com/alexbruno/hexo-generator-json-content" title="hexo-generator-json-content" target="_blank" rel="external">hexo-generator-json-content</a></p>
 <pre><code>jsonContent:
   meta: false
   pages: false
@@ -152,8 +152,8 @@ timezone: 网站时区
     excerpt: false
     categories: false
     tags: false
-</code></pre><h3 id="4-主题配置"><a href="#4-主题配置" class="headerlink" title="4.主题配置"></a>4.主题配置</h3><p>编辑主题配置文件，<br><code>themes/miho/_config.yml</code>。</p>
-<p>####4.1 属性<br>下面将介绍几个比较重要的配置。</p>
+</code></pre><h4 id="4-主题配置"><a href="#4-主题配置" class="headerlink" title="4.主题配置"></a>4.主题配置</h4><p>编辑主题配置文件，<br><code>themes/miho/_config.yml</code>。</p>
+<h4 id="4-1-属性"><a href="#4-1-属性" class="headerlink" title="4.1 属性"></a>4.1 属性</h4><p>下面将介绍几个比较重要的配置。</p>
 <pre><code># hexo-theme-miho
 # https://github.com/wongminho/hexo-theme-miho
 # Favicon of your site | 网站icon
@@ -240,26 +240,27 @@ access_counter:
   site_pv: 总访问量：
 # Copyright Information | 版权信息
 copyright: 2017 MinHow
-</code></pre><h4 id="4-2-文章封面图"><a href="#4-2-文章封面图" class="headerlink" title="4.2 文章封面图"></a>4.2 文章封面图</h4><p>文章默认封面图，尺寸：350*150，当文章基本配置没有cover_picture时才显示。</p>
+</code></pre><h5 id="4-2-文章封面图"><a href="#4-2-文章封面图" class="headerlink" title="4.2 文章封面图"></a>4.2 文章封面图</h5><p>文章默认封面图，尺寸：350*150，当文章基本配置没有cover_picture时才显示。</p>
 <pre><code>cover_picture: images/banner.jpg
-</code></pre><p>####4.3 开启背景粒子<br>是否开启背景粒子。</p>
+</code></pre><h5 id="4-3-开启背景粒子"><a href="#4-3-开启背景粒子" class="headerlink" title="4.3 开启背景粒子"></a>4.3 开启背景粒子</h5><p>是否开启背景粒子。</p>
 <pre><code>open_bg_particle: true
-</code></pre><p>####4.4 开启主页及头部动画<br>是否开启主页及头部动画。</p>
+</code></pre><h5 id="4-4-开启主页及头部动画"><a href="#4-4-开启主页及头部动画" class="headerlink" title="4.4 开启主页及头部动画"></a>4.4 开启主页及头部动画</h5><p>是否开启主页及头部动画。</p>
 <pre><code>open_animation: true
-</code></pre><p>####4.5 评论<br>支持畅言、disqus。</p>
+</code></pre><h5 id="4-5-评论"><a href="#4-5-评论" class="headerlink" title="4.5 评论"></a>4.5 评论</h5><p>支持畅言、disqus。</p>
 <pre><code># 畅言
 changyan_appid: false
 changyan_conf: false
 # disqus
 disqus: false
-</code></pre><p>####4.6 数据统计<br>支持站长、百度、google三种数据统计，正确填写配置信息即可。</p>
+</code></pre><h5 id="4-6-数据统计"><a href="#4-6-数据统计" class="headerlink" title="4.6 数据统计"></a>4.6 数据统计</h5><p>支持站长、百度、google三种数据统计，正确填写配置信息即可。</p>
 <pre><code># 站长分析，输入站点id
 cnzz_analytics: false
 # 百度分析，输入key值
 baidu_analytics: false
 # google分析
 google_analytics: false
-</code></pre><h2 id="4-7-文章基本配置"><a href="#4-7-文章基本配置" class="headerlink" title="####4.7 文章基本配置"></a>####4.7 文章基本配置</h2><pre><code>title: Hello World
+</code></pre><h5 id="4-7-文章基本配置"><a href="#4-7-文章基本配置" class="headerlink" title="4.7 文章基本配置"></a>4.7 文章基本配置</h5><pre><code>---
+title: Hello World
 date: 2017-06-18
 categories: First
 author: MinHow
@@ -273,20 +274,20 @@ cover_picture: /images/banner.jpg
 ---
 </code></pre><p>说明：</p>
 <p>需要注意tags和摘要的写法，不然首页不能正确显示标签和摘要；<br>cover_picture文章封面图，不填默认显示_config.yml配置的图片。</p>
-<h2 id="四、配置SSH-key"><a href="#四、配置SSH-key" class="headerlink" title="四、配置SSH key"></a>四、配置SSH key</h2><p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
+<h3 id="四、配置SSH-key"><a href="#四、配置SSH-key" class="headerlink" title="四、配置SSH key"></a>四、配置SSH key</h3><p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
 <pre><code>$ cd ~/. ssh
 </code></pre><p>如果提示：No such file or directory 说明你是第一次使用git。</p>
 <pre><code>ssh-keygen -t rsa -C &quot;邮件地址&quot;
 </code></pre><p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到   .ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
 <p><img src="http://image.liuxianan.com/201608/20160818_143914_495_9084.png?_=5800863" alt=""><br>将刚复制的内容粘贴到key那里，title随便填，保存。</p>
-<h3 id="测试是否成功"><a href="#测试是否成功" class="headerlink" title="测试是否成功"></a>测试是否成功</h3><pre><code>$ ssh -T git@github.com # 注意邮箱地址不用改
+<h4 id="测试是否成功"><a href="#测试是否成功" class="headerlink" title="测试是否成功"></a>测试是否成功</h4><pre><code>$ ssh -T git@github.com # 注意邮箱地址不用改
 </code></pre><p>如果提示    <code>s
 Are you sure you want to continue connecting (yes/no)?</code>，输入yes，然后会看到：</p>
 <pre><code>Hi yangheng! You&apos;ve successfully authenticated, but GitHub does not provide shell access.
 </code></pre><p>看到这个信息说明SSH已配置成功！<br>此时你还需要配置：</p>
 <pre><code>$ git config --global user.name &quot;liuxianan&quot;// 你的github用户名，非昵称
 $ git config --global user.email  &quot;xxx@qq.com&quot;// 填写你的github注册邮箱
-</code></pre><h2 id="五、上传到github"><a href="#五、上传到github" class="headerlink" title="五、上传到github"></a>五、上传到github</h2><p> hexo d如果你一切都配置好了，发布上传很容易，一句 <code>hexo d</code> 就搞定，当然关键还是你要把所有东西配置好。</p>
+</code></pre><h3 id="五、上传到github"><a href="#五、上传到github" class="headerlink" title="五、上传到github"></a>五、上传到github</h3><p> hexo d如果你一切都配置好了，发布上传很容易，一句 <code>hexo d</code> 就搞定，当然关键还是你要把所有东西配置好。</p>
 <p>首先，<code>ssh key</code>肯定要配置好。</p>
 <p>其次，配置<code>_config.yml</code>中有关deploy的部分：<br>正确写法：</p>
 <pre><code>deploy:
@@ -299,17 +300,17 @@ $ git config --global user.email  &quot;xxx@qq.com&quot;// 填写你的github注
 <pre><code>npm install hexo-deployer-git --save
 </code></pre><p>其它命令不确定，部署这个命令一定要用git bash，否则会提示Permission denied (publickey).</p>
 <p>打开你的git bash，输入hexo d就会将本次有改动的代码全部提交，没有改动的不会：</p>
-<h2 id="六、写博客"><a href="#六、写博客" class="headerlink" title="六、写博客"></a>六、写博客</h2><p>定位到我们的hexo根目录，执行命令：</p>
+<h3 id="六、写博客"><a href="#六、写博客" class="headerlink" title="六、写博客"></a>六、写博客</h3><p>定位到我们的hexo根目录，执行命令：</p>
 <pre><code>hexo new &apos;my-first-blog&apos;
 </code></pre><p>hexo会帮我们在_posts下生成相关md文件：</p>
 <p><img src="http://image.liuxianan.com/201608/20160823_183047_352_1475.png?_=5800863" alt=""></p>
 <p>我们只需要打开这个文件就可以开始写博客了，默认生成如下内容：</p>
 <p><img src="http://image.liuxianan.com/201608/20160823_183325_470_9306.png?_=5800863" alt=""></p>
-<h2 id="七、最终效果"><a href="#七、最终效果" class="headerlink" title="七、最终效果"></a>七、最终效果</h2><p>可以访问我的git博客来查看效果： <a href="https://yang00yang.github.io/" target="_blank" rel="external">https://yang00yang.github.io/</a></p>
+<h3 id="七、最终效果"><a href="#七、最终效果" class="headerlink" title="七、最终效果"></a>七、最终效果</h3><p>可以访问我的git博客来查看效果： <a href="https://yang00yang.github.io/" target="_blank" rel="external">https://yang00yang.github.io/</a></p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2017年08月25日 10:28</p>
+        <p>最后更新： 2017年08月25日 10:36</p>
         <p>原始链接： <a class="post-url" href="/2017/08/25/myblogbuild/" title="">http://yoursite.com/2017/08/25/myblogbuild/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -336,7 +337,7 @@ $ git config --global user.email  &quot;xxx@qq.com&quot;// 填写你的github注
     <aside class="post-toc-pos">
         <nav class="post-toc-wrap">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用Hexo-GitHub-个人域名搭建个人博客"><span class="post-toc-text">使用Hexo+GitHub+个人域名搭建个人博客</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、前言"><span class="post-toc-text">一、前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、配置环境和创建项目"><span class="post-toc-text">二、配置环境和创建项目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-安装Hexo"><span class="post-toc-text">1.安装Hexo</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-初始化项目"><span class="post-toc-text">2.初始化项目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#目录结构："><span class="post-toc-text">目录结构：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-生成HTML静态页"><span class="post-toc-text">3.生成HTML静态页</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-启动服务预览"><span class="post-toc-text">4.启动服务预览</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、修改主题"><span class="post-toc-text">三、修改主题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-主题简介"><span class="post-toc-text">1.主题简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-安装"><span class="post-toc-text">2.安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1安装主题"><span class="post-toc-text">2.1安装主题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-更新"><span class="post-toc-text">2.2 更新</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-依赖安装"><span class="post-toc-text">2.3 依赖安装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-启用主题"><span class="post-toc-text">3.1 启用主题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-主题配置"><span class="post-toc-text">4.主题配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-2-文章封面图"><span class="post-toc-text">4.2 文章封面图</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-7-文章基本配置"><span class="post-toc-text">####4.7 文章基本配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四、配置SSH-key"><span class="post-toc-text">四、配置SSH key</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#测试是否成功"><span class="post-toc-text">测试是否成功</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#五、上传到github"><span class="post-toc-text">五、上传到github</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#六、写博客"><span class="post-toc-text">六、写博客</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#七、最终效果"><span class="post-toc-text">七、最终效果</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用Hexo-GitHub-个人域名搭建个人博客"><span class="post-toc-text">使用Hexo+GitHub+个人域名搭建个人博客</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、前言"><span class="post-toc-text">一、前言</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二、配置环境和创建项目"><span class="post-toc-text">二、配置环境和创建项目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-安装Hexo"><span class="post-toc-text">1.安装Hexo</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-初始化项目"><span class="post-toc-text">2.初始化项目</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#目录结构："><span class="post-toc-text">目录结构：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-生成HTML静态页"><span class="post-toc-text">3.生成HTML静态页</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-启动服务预览"><span class="post-toc-text">4.启动服务预览</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三、修改主题"><span class="post-toc-text">三、修改主题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-主题简介"><span class="post-toc-text">1.主题简介</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-安装"><span class="post-toc-text">2.安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-1安装主题"><span class="post-toc-text">2.1安装主题</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-2-更新"><span class="post-toc-text">2.2 更新</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-3-依赖安装"><span class="post-toc-text">2.3 依赖安装</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-站点配置"><span class="post-toc-text">3. 站点配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-1-启用主题"><span class="post-toc-text">3.1 启用主题</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-2-网站基本配置"><span class="post-toc-text">3.2 网站基本配置</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-3-jsonContent配置"><span class="post-toc-text">3.3 jsonContent配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-主题配置"><span class="post-toc-text">4.主题配置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-1-属性"><span class="post-toc-text">4.1 属性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-2-文章封面图"><span class="post-toc-text">4.2 文章封面图</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-3-开启背景粒子"><span class="post-toc-text">4.3 开启背景粒子</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-4-开启主页及头部动画"><span class="post-toc-text">4.4 开启主页及头部动画</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-5-评论"><span class="post-toc-text">4.5 评论</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-6-数据统计"><span class="post-toc-text">4.6 数据统计</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-7-文章基本配置"><span class="post-toc-text">4.7 文章基本配置</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四、配置SSH-key"><span class="post-toc-text">四、配置SSH key</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#测试是否成功"><span class="post-toc-text">测试是否成功</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#五、上传到github"><span class="post-toc-text">五、上传到github</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#六、写博客"><span class="post-toc-text">六、写博客</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#七、最终效果"><span class="post-toc-text">七、最终效果</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
