@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>杨亨的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="YangHeng's Blog" />
+  
+  <meta name="description" content="如何使用vue.js控制列表数据的单条详细信息显示与隐藏该效果是指界面遍历显示了列表中的多个数据,如图所示 当点击第一条数据的时候，显示其详细信息，如图所示 当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示 那么该如何达到这个效果使用vue.js的话我们首先想到的是使用v-show指令控制元素的显示或隐藏那么我们设置一个全局变量planDetailisSho">
+<meta property="og:type" content="article">
+<meta property="og:title" content="杨亨的博客">
+<meta property="og:url" content="http://yoursite.com/2017/09/05/vuedivshow/index.html">
+<meta property="og:site_name" content="杨亨的博客">
+<meta property="og:description" content="如何使用vue.js控制列表数据的单条详细信息显示与隐藏该效果是指界面遍历显示了列表中的多个数据,如图所示 当点击第一条数据的时候，显示其详细信息，如图所示 当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示 那么该如何达到这个效果使用vue.js的话我们首先想到的是使用v-show指令控制元素的显示或隐藏那么我们设置一个全局变量planDetailisSho">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="d:/hexo/public/images/plan1.png">
+<meta property="og:image" content="d:/hexo/public/images/plan2.png">
+<meta property="og:image" content="d:/hexo/public/images/plan3.png">
+<meta property="og:updated_time" content="2017-09-05T07:27:42.680Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="杨亨的博客">
+<meta name="twitter:description" content="如何使用vue.js控制列表数据的单条详细信息显示与隐藏该效果是指界面遍历显示了列表中的多个数据,如图所示 当点击第一条数据的时候，显示其详细信息，如图所示 当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示 那么该如何达到这个效果使用vue.js的话我们首先想到的是使用v-show指令控制元素的显示或隐藏那么我们设置一个全局变量planDetailisSho">
+<meta name="twitter:image" content="d:/hexo/public/images/plan1.png">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div style="float:left">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=37856454&auto=1&height=66"></iframe>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/aa.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        YangHeng&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个刚毕业的程序小鱼
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home"  href="//yang00yang.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/wongminho">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-vuedivshow" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="如何使用vue-js控制列表数据的单条详细信息显示与隐藏"><a href="#如何使用vue-js控制列表数据的单条详细信息显示与隐藏" class="headerlink" title="如何使用vue.js控制列表数据的单条详细信息显示与隐藏"></a>如何使用vue.js控制列表数据的单条详细信息显示与隐藏</h1><h4 id="该效果是指界面遍历显示了列表中的多个数据-如图所示"><a href="#该效果是指界面遍历显示了列表中的多个数据-如图所示" class="headerlink" title="该效果是指界面遍历显示了列表中的多个数据,如图所示"></a>该效果是指界面遍历显示了列表中的多个数据,如图所示</h4><p><img src="D:\hexo\public\images\plan1.png" alt=""></p>
+<h4 id="当点击第一条数据的时候，显示其详细信息，如图所示"><a href="#当点击第一条数据的时候，显示其详细信息，如图所示" class="headerlink" title="当点击第一条数据的时候，显示其详细信息，如图所示"></a>当点击第一条数据的时候，显示其详细信息，如图所示</h4><p><img src="D:\hexo\public\images\plan2.png" alt=""></p>
+<h4 id="当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示"><a href="#当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示" class="headerlink" title="当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示"></a>当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示</h4><p><img src="D:\hexo\public\images\plan3.png" alt=""></p>
+<h3 id="那么该如何达到这个效果"><a href="#那么该如何达到这个效果" class="headerlink" title="那么该如何达到这个效果"></a>那么该如何达到这个效果</h3><p>使用vue.js的话我们首先想到的是使用v-show指令控制元素的显示或隐藏<br>那么我们设置一个全局变量<code>planDetailisShow: false,</code>来控制详细设计的div，然后点击一条数据的时候回出现点击一条数据，<strong>所有数据的详细信息都会显示出来</strong></p>
+<p>###怎样控制v-show中的布尔值只控制该条数据呢？</p>
+<h4 id="1-首先我们先在后台中的bean中加入一个布尔值字段负责控制该数据的显示隐藏"><a href="#1-首先我们先在后台中的bean中加入一个布尔值字段负责控制该数据的显示隐藏" class="headerlink" title="1.首先我们先在后台中的bean中加入一个布尔值字段负责控制该数据的显示隐藏"></a>1.首先我们先在后台中的bean中加入一个布尔值字段负责控制该数据的显示隐藏</h4><h4 id="并设初值为false-即不显示"><a href="#并设初值为false-即不显示" class="headerlink" title="并设初值为false,即不显示"></a>并设初值为false,即不显示</h4><pre><code>XdLoanPayplanQuery xdLoanPayplanQuery = new XdLoanPayplanQuery();
+       xdLoanPayplanQuery.setLoanbillCode(xdLoanbill.getBillCode());
+       List&lt;XdLoanPayplan&gt; xdLoanPayplanList = xdLoanPayplanService.getXdLoanPayplanAll(xdLoanPayplanQuery);
+       for(int i=0;i&lt;xdLoanPayplanList.size();i++){
+           xdLoanPayplanList.get(i).setIsShow(false);
+       }
+</code></pre><h4 id="2-接着前端的详细div设置v-show"><a href="#2-接着前端的详细div设置v-show" class="headerlink" title="2.接着前端的详细div设置v-show"></a>2.接着前端的详细div设置v-show</h4><pre><code>&lt;div class=&quot;planDetail-row&quot; v-show=&quot;plan.isShow&quot;&gt;
+                &lt;el-row&gt;
+                    &lt;el-col :span=&quot;12&quot;&gt;
+                        &lt;div class=&quot;info-wrap&quot; style=&quot;padding-bottom: 1.5px;height: 30px;&quot;&gt;
+                            &lt;el-col :span=&quot;9&quot;&gt;&lt;span class=&quot;detail-title&quot;&gt;咨询费率&lt;/span&gt;&lt;/el-col&gt;
+                            &lt;el-col :span=&quot;1&quot; style=&quot;padding-right:10px;&quot;&gt;&lt;span&gt;:&lt;/span&gt;&lt;/el-col&gt;
+                            &lt;el-col :span=&quot;5&quot;&gt;&lt;span class=&quot;detail-info&quot;&gt;{{plan.period}}&lt;/span&gt;&lt;/el-col&gt;
+                        &lt;/div&gt;
+                    &lt;/el-col&gt;
+                    &lt;el-col :span=&quot;12&quot;&gt;
+                        &lt;div class=&quot;info-wrap&quot; style=&quot;padding-bottom: 1.5px;height: 30px;&quot;&gt;
+                            &lt;el-col :span=&quot;7&quot; &gt;&lt;span class=&quot;detail-title&quot;&gt;应收本金&lt;/span&gt;&lt;/el-col&gt;
+                            &lt;el-col :span=&quot;1&quot; &gt;&lt;span&gt;:&lt;/span&gt;&lt;/el-col&gt;
+                            &lt;el-col :span=&quot;6&quot; &gt;&lt;span class=&quot;detail-info&quot;&gt;{{plan.payPrincipal}}&lt;/span&gt;&lt;/el-col&gt;
+                        &lt;/div&gt;
+                    &lt;/el-col&gt;
+                &lt;/el-row&gt;
+</code></pre><p>注：plan为<code>&lt;template v-for=&quot;(plan,index) in loanPayplan&quot;&gt;</code>中的plan</p>
+<h4 id="3-编写数据的click事件"><a href="#3-编写数据的click事件" class="headerlink" title="3.编写数据的click事件"></a>3.编写数据的click事件</h4><pre><code>planDetailChange(index,row){
+                debugger;
+                if(row.isShow == true){
+                    row.isShow = false;
+                }else{
+                for (var value of this.loanPayplan) {
+                  value.isShow =false;
+                }
+                row.isShow = true;
+                }
+            },
+</code></pre><h3 id="通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果"><a href="#通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果" class="headerlink" title="通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果"></a>通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果</h3>
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2017年09月05日 15:27</p>
+        <p>原始链接： <a class="post-url" href="/2017/09/05/vuedivshow/" title="">http://yoursite.com/2017/09/05/vuedivshow/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/aa.jpg" alt="杨亨">
+                杨亨
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos">
+        <nav class="post-toc-wrap">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如何使用vue-js控制列表数据的单条详细信息显示与隐藏"><span class="post-toc-text">如何使用vue.js控制列表数据的单条详细信息显示与隐藏</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#该效果是指界面遍历显示了列表中的多个数据-如图所示"><span class="post-toc-text">该效果是指界面遍历显示了列表中的多个数据,如图所示</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#当点击第一条数据的时候，显示其详细信息，如图所示"><span class="post-toc-text">当点击第一条数据的时候，显示其详细信息，如图所示</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示"><span class="post-toc-text">当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#那么该如何达到这个效果"><span class="post-toc-text">那么该如何达到这个效果</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-首先我们先在后台中的bean中加入一个布尔值字段负责控制该数据的显示隐藏"><span class="post-toc-text">1.首先我们先在后台中的bean中加入一个布尔值字段负责控制该数据的显示隐藏</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#并设初值为false-即不显示"><span class="post-toc-text">并设初值为false,即不显示</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-接着前端的详细div设置v-show"><span class="post-toc-text">2.接着前端的详细div设置v-show</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-编写数据的click事件"><span class="post-toc-text">3.编写数据的click事件</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果"><span class="post-toc-text">通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/25/myblogbuild/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">使用Hexo+GitHub搭建个人博客</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <div id="SOHUCS" sid="vuedivshow" >   
+</div>
+ <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+window.changyan.api.config({
+appid: 'cytbiU9Km',
+conf: 'prod_f20edfe2ef1bd3ee4a4587879233ccf4'
+});
+</script>
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2017 杨亨<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div class="sidebar-menu">
+        <i class="fa fa-bars"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/关心/" style="font-size: 10px;">关心</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a> <a href="/tags/旅途/" style="font-size: 10px;">旅途</a> <a href="/tags/祝福/" style="font-size: 10px;">祝福</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+</div>
+
+<div class="search-container" id="search-container">
+    <ul class="search-result" id="search-result">
+    </ul>
+</div>
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/sidebar-menu-box.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>
