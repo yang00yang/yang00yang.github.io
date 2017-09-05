@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>杨亨的博客</title>
+  <title>如何使用vue.js控制列表数据的单条详细信息显示与隐藏 | 杨亨的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="YangHeng's Blog" />
   
   <meta name="description" content="如何使用vue.js控制列表数据的单条详细信息显示与隐藏该效果是指界面遍历显示了列表中的多个数据,如图所示 当点击第一条数据的时候，显示其详细信息，如图所示 当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示 那么该如何达到这个效果使用vue.js的话我们首先想到的是使用v-show指令控制元素的显示或隐藏那么我们设置一个全局变量planDetailisSho">
+<meta name="keywords" content="技术,blog">
 <meta property="og:type" content="article">
-<meta property="og:title" content="杨亨的博客">
+<meta property="og:title" content="如何使用vue.js控制列表数据的单条详细信息显示与隐藏">
 <meta property="og:url" content="http://yoursite.com/2017/09/05/vuedivshow/index.html">
 <meta property="og:site_name" content="杨亨的博客">
 <meta property="og:description" content="如何使用vue.js控制列表数据的单条详细信息显示与隐藏该效果是指界面遍历显示了列表中的多个数据,如图所示 当点击第一条数据的时候，显示其详细信息，如图所示 当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示 那么该如何达到这个效果使用vue.js的话我们首先想到的是使用v-show指令控制元素的显示或隐藏那么我们设置一个全局变量planDetailisSho">
@@ -18,9 +19,9 @@
 <meta property="og:image" content="d:/hexo/public/images/plan1.png">
 <meta property="og:image" content="d:/hexo/public/images/plan2.png">
 <meta property="og:image" content="d:/hexo/public/images/plan3.png">
-<meta property="og:updated_time" content="2017-09-05T07:27:42.680Z">
+<meta property="og:updated_time" content="2017-09-05T07:34:24.711Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="杨亨的博客">
+<meta name="twitter:title" content="如何使用vue.js控制列表数据的单条详细信息显示与隐藏">
 <meta name="twitter:description" content="如何使用vue.js控制列表数据的单条详细信息显示与隐藏该效果是指界面遍历显示了列表中的多个数据,如图所示 当点击第一条数据的时候，显示其详细信息，如图所示 当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示 那么该如何达到这个效果使用vue.js的话我们首先想到的是使用v-show指令控制元素的显示或隐藏那么我们设置一个全局变量planDetailisSho">
 <meta name="twitter:image" content="d:/hexo/public/images/plan1.png">
   
@@ -94,6 +95,36 @@
         <section id="main" class="body-wrap"><article id="post-vuedivshow" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      如何使用vue.js控制列表数据的单条详细信息显示与隐藏
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/First/">First</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-09-05
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
     <div class="article-entry post-content" itemprop="articleBody">
       
             
@@ -140,8 +171,8 @@
 </code></pre><h3 id="通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果"><a href="#通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果" class="headerlink" title="通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果"></a>通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果</h3>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2017年09月05日 15:27</p>
-        <p>原始链接： <a class="post-url" href="/2017/09/05/vuedivshow/" title="">http://yoursite.com/2017/09/05/vuedivshow/</a></p>
+        <p>最后更新： 2017年09月05日 15:34</p>
+        <p>原始链接： <a class="post-url" href="/2017/09/05/vuedivshow/" title="如何使用vue.js控制列表数据的单条详细信息显示与隐藏">http://yoursite.com/2017/09/05/vuedivshow/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/images/aa.jpg" alt="杨亨">
@@ -157,6 +188,15 @@
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/技术/" class="color3">技术</a>
+      
+    <a href="/tags/blog/" class="color5">blog</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -243,7 +283,7 @@ conf: 'prod_f20edfe2ef1bd3ee4a4587879233ccf4'
 <div class="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/关心/" style="font-size: 10px;">关心</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a> <a href="/tags/旅途/" style="font-size: 10px;">旅途</a> <a href="/tags/祝福/" style="font-size: 10px;">祝福</a>
+            <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/关心/" style="font-size: 10px;">关心</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a> <a href="/tags/旅途/" style="font-size: 10px;">旅途</a> <a href="/tags/祝福/" style="font-size: 10px;">祝福</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
