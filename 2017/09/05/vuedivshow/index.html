@@ -16,14 +16,14 @@
 <meta property="og:site_name" content="杨亨的博客">
 <meta property="og:description" content="如何使用vue.js控制列表数据的单条详细信息显示与隐藏">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="d:/hexo/public/images/plan1.png">
-<meta property="og:image" content="d:/hexo/public/images/plan2.png">
-<meta property="og:image" content="d:/hexo/public/images/plan3.png">
-<meta property="og:updated_time" content="2017-09-05T07:36:03.082Z">
+<meta property="og:image" content="http://yoursite.com/images/plan1.png">
+<meta property="og:image" content="http://yoursite.com/images/plan2.png">
+<meta property="og:image" content="http://yoursite.com/images/plan3.png">
+<meta property="og:updated_time" content="2017-09-05T07:40:01.888Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何使用vue.js控制列表数据的单条详细信息显示与隐藏">
 <meta name="twitter:description" content="如何使用vue.js控制列表数据的单条详细信息显示与隐藏">
-<meta name="twitter:image" content="d:/hexo/public/images/plan1.png">
+<meta name="twitter:image" content="http://yoursite.com/images/plan1.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -129,9 +129,9 @@
       
             
             <p>如何使用vue.js控制列表数据的单条详细信息显示与隐藏</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h1 id="如何使用vue-js控制列表数据的单条详细信息显示与隐藏"><a href="#如何使用vue-js控制列表数据的单条详细信息显示与隐藏" class="headerlink" title="如何使用vue.js控制列表数据的单条详细信息显示与隐藏"></a>如何使用vue.js控制列表数据的单条详细信息显示与隐藏</h1><h4 id="该效果是指界面遍历显示了列表中的多个数据-如图所示"><a href="#该效果是指界面遍历显示了列表中的多个数据-如图所示" class="headerlink" title="该效果是指界面遍历显示了列表中的多个数据,如图所示"></a>该效果是指界面遍历显示了列表中的多个数据,如图所示</h4><p><img src="D:\hexo\public\images\plan1.png" alt=""></p>
-<h4 id="当点击第一条数据的时候，显示其详细信息，如图所示"><a href="#当点击第一条数据的时候，显示其详细信息，如图所示" class="headerlink" title="当点击第一条数据的时候，显示其详细信息，如图所示"></a>当点击第一条数据的时候，显示其详细信息，如图所示</h4><p><img src="D:\hexo\public\images\plan2.png" alt=""></p>
-<h4 id="当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示"><a href="#当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示" class="headerlink" title="当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示"></a>当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示</h4><p><img src="D:\hexo\public\images\plan3.png" alt=""></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h1 id="如何使用vue-js控制列表数据的单条详细信息显示与隐藏"><a href="#如何使用vue-js控制列表数据的单条详细信息显示与隐藏" class="headerlink" title="如何使用vue.js控制列表数据的单条详细信息显示与隐藏"></a>如何使用vue.js控制列表数据的单条详细信息显示与隐藏</h1><h4 id="该效果是指界面遍历显示了列表中的多个数据-如图所示"><a href="#该效果是指界面遍历显示了列表中的多个数据-如图所示" class="headerlink" title="该效果是指界面遍历显示了列表中的多个数据,如图所示"></a>该效果是指界面遍历显示了列表中的多个数据,如图所示</h4><p><img src="/images/plan1.png" alt=""></p>
+<h4 id="当点击第一条数据的时候，显示其详细信息，如图所示"><a href="#当点击第一条数据的时候，显示其详细信息，如图所示" class="headerlink" title="当点击第一条数据的时候，显示其详细信息，如图所示"></a>当点击第一条数据的时候，显示其详细信息，如图所示</h4><p><img src="/images/plan2.png" alt=""></p>
+<h4 id="当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示"><a href="#当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示" class="headerlink" title="当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示"></a>当点击第二条数据的时候，第一条数据的详细信息隐藏，第二条数据的详细信息展开显示，如图所示</h4><p><img src="/images/plan3.png" alt=""></p>
 <h3 id="那么该如何达到这个效果"><a href="#那么该如何达到这个效果" class="headerlink" title="那么该如何达到这个效果"></a>那么该如何达到这个效果</h3><p>使用vue.js的话我们首先想到的是使用v-show指令控制元素的显示或隐藏<br>那么我们设置一个全局变量<code>planDetailisShow: false,</code>来控制详细设计的div，然后点击一条数据的时候回出现点击一条数据，<strong>所有数据的详细信息都会显示出来</strong></p>
 <p>###怎样控制v-show中的布尔值只控制该条数据呢？</p>
 <h4 id="1-首先我们先在后台中的bean中加入一个布尔值字段负责控制该数据的显示隐藏"><a href="#1-首先我们先在后台中的bean中加入一个布尔值字段负责控制该数据的显示隐藏" class="headerlink" title="1.首先我们先在后台中的bean中加入一个布尔值字段负责控制该数据的显示隐藏"></a>1.首先我们先在后台中的bean中加入一个布尔值字段负责控制该数据的显示隐藏</h4><h4 id="并设初值为false-即不显示"><a href="#并设初值为false-即不显示" class="headerlink" title="并设初值为false,即不显示"></a>并设初值为false,即不显示</h4><pre><code>XdLoanPayplanQuery xdLoanPayplanQuery = new XdLoanPayplanQuery();
@@ -172,7 +172,7 @@
 </code></pre><h3 id="通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果"><a href="#通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果" class="headerlink" title="通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果"></a>通过在bean中增加字段的方式，即可给不同数据添加控制显示的布尔值，达到预期的效果</h3>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2017年09月05日 15:36</p>
+        <p>最后更新： 2017年09月05日 15:40</p>
         <p>原始链接： <a class="post-url" href="/2017/09/05/vuedivshow/" title="如何使用vue.js控制列表数据的单条详细信息显示与隐藏">http://yoursite.com/2017/09/05/vuedivshow/</a></p>
         <footer>
             <a href="http://yoursite.com">
