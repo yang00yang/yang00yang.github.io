@@ -8,20 +8,20 @@
   
     <meta name="keywords" content="YangHeng's Blog" />
   
-  <meta name="description" content="代理服务器、反向代理服务器以及Nginx">
+  <meta name="description" content="最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别代理服务器通常分为两种转发代理(forward proxy)服务器和反向代理(reverse proxy)服务器 1） 转发代理服务器转发代理服务器平常简称为代理服务器 普通的转发代理服务器是客户端与原始服务器之间的一个中间服务器。 为了">
 <meta name="keywords" content="技术,blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="代理服务器、反向代理服务器以及Nginx">
 <meta property="og:url" content="http://yoursite.com/2017/09/21/nginx/index.html">
 <meta property="og:site_name" content="杨亨的博客">
-<meta property="og:description" content="代理服务器、反向代理服务器以及Nginx">
+<meta property="og:description" content="最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别代理服务器通常分为两种转发代理(forward proxy)服务器和反向代理(reverse proxy)服务器 1） 转发代理服务器转发代理服务器平常简称为代理服务器 普通的转发代理服务器是客户端与原始服务器之间的一个中间服务器。 为了">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.imgur.com/pIFsOPL.jpg">
 <meta property="og:image" content="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=81e7da92b7003af359b7d4325443ad39/bba1cd11728b47100e26c757c2cec3fdfc03231b.jpg">
-<meta property="og:updated_time" content="2017-09-21T06:37:54.602Z">
+<meta property="og:updated_time" content="2017-09-21T06:45:58.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代理服务器、反向代理服务器以及Nginx">
-<meta name="twitter:description" content="代理服务器、反向代理服务器以及Nginx">
+<meta name="twitter:description" content="最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别代理服务器通常分为两种转发代理(forward proxy)服务器和反向代理(reverse proxy)服务器 1） 转发代理服务器转发代理服务器平常简称为代理服务器 普通的转发代理服务器是客户端与原始服务器之间的一个中间服务器。 为了">
 <meta name="twitter:image" content="https://i.imgur.com/pIFsOPL.jpg">
   
   
@@ -127,25 +127,24 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>代理服务器、反向代理服务器以及Nginx</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h1 id="代理服务器、反向代理服务器以及Nginx"><a href="#代理服务器、反向代理服务器以及Nginx" class="headerlink" title="代理服务器、反向代理服务器以及Nginx"></a>代理服务器、反向代理服务器以及Nginx</h1><h2 id="最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别"><a href="#最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别" class="headerlink" title="最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别"></a>最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别</h2><h2 id="代理服务器通常分为两种"><a href="#代理服务器通常分为两种" class="headerlink" title="代理服务器通常分为两种"></a>代理服务器通常分为两种</h2><pre><code>转发代理(forward proxy)服务器和反向代理(reverse proxy)服务器
-</code></pre><h2 id="1）-转发代理服务器"><a href="#1）-转发代理服务器" class="headerlink" title="1） 转发代理服务器"></a>1） 转发代理服务器</h2><p>转发代理服务器平常简称为代理服务器</p>
+            <h3 id="最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别"><a href="#最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别" class="headerlink" title="最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别"></a>最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别</h3><h3 id="代理服务器通常分为两种"><a href="#代理服务器通常分为两种" class="headerlink" title="代理服务器通常分为两种"></a>代理服务器通常分为两种</h3><pre><code>转发代理(forward proxy)服务器和反向代理(reverse proxy)服务器
+</code></pre><h4 id="1）-转发代理服务器"><a href="#1）-转发代理服务器" class="headerlink" title="1） 转发代理服务器"></a>1） 转发代理服务器</h4><p>转发代理服务器平常简称为代理服务器</p>
 <p>普通的转发代理服务器是客户端与原始服务器之间的一个中间服务器。</p>
 <p>为了从原始服务器获取内容，客户端发送请求到代理服务器，然后代理服务器从原始服务器中获取内容再返回给客户端。客户端必须专门地配置转发代理来访问其他站点，如在浏览器中配置代理服务器地址及端口号等。</p>
 <p>转发代理服务器的一个典型应用就是为处于防火墙后的内部客户端提供访问外部Internet网，比如校园网用户通过代理访问国外网站，公司内网用户通过公司的统一代理访问外部Internet网站等。转发代理服务器也能够使用缓存来缓解原始服务器负载，提供响应速度。</p>
 <p><img src="https://i.imgur.com/pIFsOPL.jpg" alt=""></p>
-<h2 id="2）反向代理服务器"><a href="#2）反向代理服务器" class="headerlink" title="2）反向代理服务器"></a>2）反向代理服务器</h2><p>而反向代理服务器则相反，在客户端来看它就像一个普通的Web服务器。客户端不要做任何特殊的配置。客户端发送普通的请求来获取反向代理所属空间的内容。反向代理决定将这些请求发往何处，然后就好像它本身就是原始服务器一样将请求内容返回。</p>
+<h4 id="2）反向代理服务器"><a href="#2）反向代理服务器" class="headerlink" title="2）反向代理服务器"></a>2）反向代理服务器</h4><p>而反向代理服务器则相反，在客户端来看它就像一个普通的Web服务器。客户端不要做任何特殊的配置。客户端发送普通的请求来获取反向代理所属空间的内容。反向代理决定将这些请求发往何处，然后就好像它本身就是原始服务器一样将请求内容返回。</p>
 <p>反向代理服务器的一个典型应用就是为处于防火墙后的服务器提供外部Internet用户的访问。反向代理能够用于在多个后端服务器提供负载均衡，或者为较慢的后端服务器提供缓存。此外，反向代理还能够简单地将多个服务器映射到同一个URL空间。</p>
 <p>当一个代理服务器能够代理外部网络上的主机，访问内部网络时，这种代理服务的方式称为反向代理服务。此时代理服务器对外就表现为一个Web服务器，外部网络就可以简单把它当作一个标准的Web服务器而不需要特定的配置。不同之处在于，这个服务器没有保存任何网页的真实数据，所有的静态网页或者CGI程序，都保存在内部的Web服务器上。<strong>因此对反向代理服务器的攻击并不会使得网页信息遭到破坏，这样就增强了Web服务器的安全性。</strong></p>
 <p><img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=81e7da92b7003af359b7d4325443ad39/bba1cd11728b47100e26c757c2cec3fdfc03231b.jpg" alt=""></p>
-<h2 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2><h2 id="A要向C借钱，但A联系不上C，就给B打电话找到C借钱，B就是代理服务器"><a href="#A要向C借钱，但A联系不上C，就给B打电话找到C借钱，B就是代理服务器" class="headerlink" title="A要向C借钱，但A联系不上C，就给B打电话找到C借钱，B就是代理服务器"></a>A要向C借钱，但A联系不上C，就给B打电话找到C借钱，B就是代理服务器</h2><h2 id="A要向C借钱，然后B知道后问C要上钱，A直接问B要钱就行，B就是反向代理服务器"><a href="#A要向C借钱，然后B知道后问C要上钱，A直接问B要钱就行，B就是反向代理服务器" class="headerlink" title="A要向C借钱，然后B知道后问C要上钱，A直接问B要钱就行，B就是反向代理服务器"></a>A要向C借钱，然后B知道后问C要上钱，A直接问B要钱就行，B就是反向代理服务器</h2><h2 id="3）Nginx"><a href="#3）Nginx" class="headerlink" title="3）Nginx"></a>3）Nginx</h2><p>Nginx (engine x) 是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。<br>其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。2011年6月1日，nginx 1.0.4发布。<br>Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。</p>
-<h3 id="Nginx-是一个高性能的-Web-和反向代理服务器-它具有有很多非常优越的特性"><a href="#Nginx-是一个高性能的-Web-和反向代理服务器-它具有有很多非常优越的特性" class="headerlink" title="Nginx 是一个高性能的 Web 和反向代理服务器, 它具有有很多非常优越的特性:"></a>Nginx 是一个高性能的 Web 和反向代理服务器, 它具有有很多非常优越的特性:</h3><p><strong>作为 Web 服务器：</strong>相比 Apache，Nginx 使用更少的资源，支持更多的并发连接，体现更高的效率，这点使 Nginx 尤其受到虚拟主机提供商的欢迎。能够支持高达 50,000 个并发连接数的响应，感谢 Nginx 为我们选择了 epoll and kqueue 作为开发模型.<br><strong><br>作为负载均衡服务器：</strong>Nginx 既可以在内部直接支持 Rails 和 PHP，也可以支持作为 HTTP代理服务器 对外进行服务。Nginx 用 C 编写, 不论是系统资源开销还是 CPU 使用效率都比 Perlbal 要好的多。</p>
+<h4 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h4><h4 id="A要向C借钱，但A联系不上C，就给B打电话找到C借钱，B就是代理服务器"><a href="#A要向C借钱，但A联系不上C，就给B打电话找到C借钱，B就是代理服务器" class="headerlink" title="A要向C借钱，但A联系不上C，就给B打电话找到C借钱，B就是代理服务器"></a>A要向C借钱，但A联系不上C，就给B打电话找到C借钱，B就是代理服务器</h4><h4 id="A要向C借钱，然后B知道后问C要上钱，A直接问B要钱就行，B就是反向代理服务器"><a href="#A要向C借钱，然后B知道后问C要上钱，A直接问B要钱就行，B就是反向代理服务器" class="headerlink" title="A要向C借钱，然后B知道后问C要上钱，A直接问B要钱就行，B就是反向代理服务器"></a>A要向C借钱，然后B知道后问C要上钱，A直接问B要钱就行，B就是反向代理服务器</h4><h4 id="3）Nginx"><a href="#3）Nginx" class="headerlink" title="3）Nginx"></a>3）Nginx</h4><p>Nginx (engine x) 是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。<br>其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。2011年6月1日，nginx 1.0.4发布。<br>Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。</p>
+<h4 id="Nginx-是一个高性能的-Web-和反向代理服务器-它具有有很多非常优越的特性"><a href="#Nginx-是一个高性能的-Web-和反向代理服务器-它具有有很多非常优越的特性" class="headerlink" title="Nginx 是一个高性能的 Web 和反向代理服务器, 它具有有很多非常优越的特性:"></a>Nginx 是一个高性能的 Web 和反向代理服务器, 它具有有很多非常优越的特性:</h4><p><strong>作为 Web 服务器：</strong>相比 Apache，Nginx 使用更少的资源，支持更多的并发连接，体现更高的效率，这点使 Nginx 尤其受到虚拟主机提供商的欢迎。能够支持高达 50,000 个并发连接数的响应，感谢 Nginx 为我们选择了 epoll and kqueue 作为开发模型.<br><strong><br>作为负载均衡服务器：</strong>Nginx 既可以在内部直接支持 Rails 和 PHP，也可以支持作为 HTTP代理服务器 对外进行服务。Nginx 用 C 编写, 不论是系统资源开销还是 CPU 使用效率都比 Perlbal 要好的多。</p>
 <p><strong>作为邮件代理服务器:</strong> Nginx 同时也是一个非常优秀的邮件代理服务器（最早开发这个产品的目的之一也是作为邮件代理服务器），Last.fm 描述了成功并且美妙的使用经验。</p>
 <p>Nginx 安装非常的简单，配置文件 非常简洁（还能够支持perl语法），Bugs非常少的服务器: Nginx 启动特别容易，并且几乎可以做到7*24不间断运行，即使运行数个月也不需要重新启动。你还能够在 不间断服务的情况下进行软件版本的升级。</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2017年09月21日 14:37</p>
+        <p>最后更新： 2017年09月21日 14:45</p>
         <p>原始链接： <a class="post-url" href="/2017/09/21/nginx/" title="代理服务器、反向代理服务器以及Nginx">http://yoursite.com/2017/09/21/nginx/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -181,7 +180,7 @@
     <aside class="post-toc-pos">
         <nav class="post-toc-wrap">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#"><span class="post-toc-text"></span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#代理服务器、反向代理服务器以及Nginx"><span class="post-toc-text">代理服务器、反向代理服务器以及Nginx</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别"><span class="post-toc-text">最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代理服务器通常分为两种"><span class="post-toc-text">代理服务器通常分为两种</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1）-转发代理服务器"><span class="post-toc-text">1） 转发代理服务器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2）反向代理服务器"><span class="post-toc-text">2）反向代理服务器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#我的理解"><span class="post-toc-text">我的理解</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#A要向C借钱，但A联系不上C，就给B打电话找到C借钱，B就是代理服务器"><span class="post-toc-text">A要向C借钱，但A联系不上C，就给B打电话找到C借钱，B就是代理服务器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#A要向C借钱，然后B知道后问C要上钱，A直接问B要钱就行，B就是反向代理服务器"><span class="post-toc-text">A要向C借钱，然后B知道后问C要上钱，A直接问B要钱就行，B就是反向代理服务器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3）Nginx"><span class="post-toc-text">3）Nginx</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Nginx-是一个高性能的-Web-和反向代理服务器-它具有有很多非常优越的特性"><span class="post-toc-text">Nginx 是一个高性能的 Web 和反向代理服务器, 它具有有很多非常优越的特性:</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别"><span class="post-toc-text">最近的项目中用到了nginx访问外部服务器，那么nginx究竟有什么用，想要了解nginx，就要了解反向代理，那么，什么是反向代理，这核普通的代理服务器有什么区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代理服务器通常分为两种"><span class="post-toc-text">代理服务器通常分为两种</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1）-转发代理服务器"><span class="post-toc-text">1） 转发代理服务器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2）反向代理服务器"><span class="post-toc-text">2）反向代理服务器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#我的理解"><span class="post-toc-text">我的理解</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#A要向C借钱，但A联系不上C，就给B打电话找到C借钱，B就是代理服务器"><span class="post-toc-text">A要向C借钱，但A联系不上C，就给B打电话找到C借钱，B就是代理服务器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#A要向C借钱，然后B知道后问C要上钱，A直接问B要钱就行，B就是反向代理服务器"><span class="post-toc-text">A要向C借钱，然后B知道后问C要上钱，A直接问B要钱就行，B就是反向代理服务器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3）Nginx"><span class="post-toc-text">3）Nginx</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Nginx-是一个高性能的-Web-和反向代理服务器-它具有有很多非常优越的特性"><span class="post-toc-text">Nginx 是一个高性能的 Web 和反向代理服务器, 它具有有很多非常优越的特性:</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
